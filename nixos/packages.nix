@@ -48,6 +48,7 @@
     bluez
     bluez-tools
     neovim
+    gh
 
     # GUI utils
     feh
