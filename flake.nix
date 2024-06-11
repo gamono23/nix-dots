@@ -17,7 +17,7 @@
     };
 
     polymc.url = "github:PolyMC/PolyMC";
-    pollymc.url = "github:fn2006/PollyMC";
+    pollymc.url = "github:fn2006/PollyMC"; # Doesn't work for some reason
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
@@ -26,7 +26,7 @@
       system = "x86_64-linux";
     in {
 
-    # nixos - system hostname
+    # RyoYamada - system hostname (change to it)
     nixosConfigurations.RyoYamada = nixpkgs.lib.nixosSystem {
       specialArgs = {
         pkgs-stable = import nixpkgs-stable {
