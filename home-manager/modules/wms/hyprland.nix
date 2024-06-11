@@ -103,7 +103,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/Downloads/nixos-chan.png"
+        "swww img ~/Downloads/wallhaven.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
