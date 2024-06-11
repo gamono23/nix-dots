@@ -109,7 +109,7 @@
 
       exec-once = [
         "swww init"
-        "swww img /home/gamono/Downloads/wallhaven.png"
+        "swww img ~/nix/home-manager/modules/wms/wall/wallhaven.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
