@@ -55,6 +55,8 @@
           size = 16;
           passes = 2;
           new_optimizations = true;
+	  xray = true;
+	  ignore_opacity = true;
         };
 
         drop_shadow = true;
@@ -99,6 +101,10 @@
       windowrule = [
         "float, ^(imv)$"
         "float, ^(mpv)$"
+      ];
+
+      layerrule = [
+	"blur, waybar"
       ];
 
       exec-once = [

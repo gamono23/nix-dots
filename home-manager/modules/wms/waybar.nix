@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 13 -10 18";
+        margin = "9 18 -10 18";
 
         modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
         modules-center = ["clock"];
@@ -131,7 +131,8 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 }
 
 window#waybar.hidden {
@@ -139,38 +140,28 @@ window#waybar.hidden {
 }
 
 #workspaces {
-    margin-right: 8px;
+    margin-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: #383c4a;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 #workspaces button {
     transition: none;
-    color: #7c818c;
+    color: #000000;
     background: transparent;
     padding: 5px;
     font-size: 18px;
 }
 
 #workspaces button.persistent {
-    color: #7c818c;
+    color: #000000;
     font-size: 12px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
-    color: #383c4a;
-    background: #7c818c;
-}
-
 #workspaces button.active {
-    background: #4e5263;
-    color: white;
+    background: rgba(255, 255, 255, 0.65);
+    color: black;
     border-radius: inherit;
 }
 
@@ -179,8 +170,8 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #keyboard-state {
@@ -188,8 +179,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #custom-pacman {
@@ -197,8 +188,8 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #custom-mail {
@@ -207,7 +198,7 @@ window#waybar.hidden {
     border-radius: 0px 10px 10px 0px;
     transition: none;
     color: #ffffff;
-    background: #383c4a;
+    background: transparent;
 }
 
 #submap {
@@ -224,8 +215,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #custom-weather {
@@ -242,13 +233,13 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: transparent;
+    color: black;
 }
 
 #custom-mem {
@@ -257,8 +248,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #cpu {
@@ -267,8 +258,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 #temperature {
@@ -330,8 +321,8 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: #ffffff;
-    background: #383c4a;
+    color: black;
+    background: transparent;
 }
 
 @keyframes blink {
