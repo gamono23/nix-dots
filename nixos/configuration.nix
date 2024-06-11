@@ -24,8 +24,8 @@
   services.flatpak.enable = true; # Flathub is based on flatpak
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    wlr.enable = false;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
   # ^ Flatpak is this hungry...
 
