@@ -49,6 +49,7 @@
     bluez-tools
     neovim
     gh
+    pywal
 
     # GUI utils
     feh
