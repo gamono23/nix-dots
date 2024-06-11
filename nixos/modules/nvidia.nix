@@ -1,17 +1,4 @@
-{ config, lib, ...}: {
-  services.xserver = {
-    enable = true;
-
-    layout = "us";
-    xkbVariant = "";
-
-    displayManager = {
-      startx.enable = true;
-    };
-
-    # videoDrivers = [ "nvidia" ];
-  };
- 
+{
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -35,5 +22,4 @@
       persistencedSha256 = lib.fakeSha256;
     };
   }; 
-
 }

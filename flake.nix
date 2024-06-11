@@ -1,5 +1,5 @@
 {
-  description = "My system configuration";
+  description = "NixOwOs dots";
 
   inputs = {
 
@@ -17,6 +17,7 @@
     };
 
     polymc.url = "github:PolyMC/PolyMC";
+    pollymc.url = "github:fn2006/PollyMC";
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
@@ -26,7 +27,7 @@
     in {
 
     # nixos - system hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.RyoYamada = nixpkgs.lib.nixosSystem {
       specialArgs = {
         pkgs-stable = import nixpkgs-stable {
           inherit system;
@@ -40,7 +41,7 @@
       ];
     };
 
-    homeConfigurations.amper = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.gamono = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [ ./home-manager/home.nix ];
     };

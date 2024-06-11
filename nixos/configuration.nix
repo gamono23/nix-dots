@@ -5,19 +5,21 @@
     ./modules/bundle.nix
   ];
 
-  disabledModules = [
-    ./modules/xserver.nix
-  ];
+  # disabledModules = [
+  #  ./modules/xserver.nix
+  #];
 
-  nixpkgs.overlays = [ inputs.polymc.overlay ];
+  # nixpkgs.overlays = [ inputs.pollymc.overlay ];
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "RyoYamada"; # Define your hostname.
 
-  time.timeZone = "Asia/Tashkent"; # Set your time zone.
+  time.timeZone = "Europe/Moscow"; # Set your time zone.
 
   i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
+  
+  services.gvfs.enable = true;  
 
-  system.stateVersion = "23.05"; # Don't change it bro
+  system.stateVersion = "24.05"; # Using current system.stateVersion from latest version of NixOS
 }

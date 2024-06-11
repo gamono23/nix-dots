@@ -6,7 +6,7 @@
     settings = {
       "$mainMod" = "SUPER";
 
-      monitor = ",1920x1080@90,auto,1";
+      monitor = ",1920x1080@60,auto,1";
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -15,6 +15,10 @@
         "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
+        "WLR_NO_HARDWARE_CURSOR,1"
+        "LIBVA_DRIVER_NAME,nvidia"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "GBM_BACKEND,nvidia-drm"
       ];
 
       debug = {
@@ -25,15 +29,10 @@
       input = {
         kb_layout = "us,ru";
         kb_variant = "lang";
-        kb_options = "grp:caps_toggle";
+        kb_options = "grp:alt_shift_toggle";
 
         follow_mouse = 1;
-
-        touchpad = {
-          natural_scroll = false;
-        };
-
-        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0;
       };
 
       general = {
@@ -81,20 +80,12 @@
       };
 
       dwindle = {
-        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # you probably want this
+        pseudotile = true;
+        preserve_split = true; 
       };
 
       master = {
         new_is_master = true;
-      };
-
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_invert = false;
-        workspace_swipe_distance = 200;
-        workspace_swipe_forever = true;
       };
 
       misc = {
@@ -116,6 +107,7 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+	"/nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}')/libexec/polkit-kde-authentication-agent-1"
       ];
 
       bind = [
@@ -176,20 +168,12 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-        # Keyboard backlight
-        "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-        "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
-
         # Volume and Media Control
         ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
         ", XF86AudioLowerVolume, exec, pamixer -d 5 "
         ", XF86AudioMute, exec, pamixer -t"
         ", XF86AudioMicMute, exec, pamixer --default-source -m"
-        
-        # Brightness control
-        ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-        ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
-
+ 
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''

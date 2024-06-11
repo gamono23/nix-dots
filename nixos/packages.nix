@@ -6,25 +6,21 @@
 
   environment.systemPackages = with pkgs; [
     # Desktop apps
-    audacity
-    chromium
+    firefox
     telegram-desktop
     alacritty
     obs-studio
-    rofi
     wofi
     mpv
-    kdenlive
-    discord
     gparted
-    obsidian
-    zoom-us
     pcmanfm-qt
-    polymc
+    xfce.thunar
+    #  pollymc
 
     # Coding stuff
     gnumake
     gcc
+    clang
     nodejs
     python
     (python3.withPackages (ps: with ps; [ requests ]))
@@ -41,21 +37,16 @@
     unzip
     scrot
     ffmpeg
-    light
-    lux
-    mediainfo
-    ranger
     zram-generator
     cava
     zip
     ntfs3g
-    yt-dlp
-    brightnessctl
     swww
     openssl
     lazygit
     bluez
     bluez-tools
+    neovim
 
     # GUI utils
     feh
@@ -64,34 +55,21 @@
     screenkey
     mako
     gromit-mpx
-
-    # Xorg stuff
-    #xterm
-    #xclip
-    #xorg.xbacklight
+    kdePackages.polkit-kde-agent-1
 
     # Wayland stuff
-    xwayland
     wl-clipboard
     cliphist
 
     # WMs and stuff
-    herbstluftwm
     hyprland
     seatd
     xdg-desktop-portal-hyprland
-    polybar
     waybar
 
     # Sound
     pipewire
-    pulseaudio
-    pamixer
-
-    # GPU stuff 
-    amdvlk
-    rocm-opencl-icd
-    glaxnimate
+    pavucontrol
 
     # Screenshotting
     grim
