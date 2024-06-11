@@ -15,6 +15,7 @@
     gparted
     pcmanfm-qt
     xfce.thunar
+    figma-linux
     #  pollymc
 
     # Coding stuff
