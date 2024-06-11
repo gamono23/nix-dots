@@ -20,6 +20,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
   
   services.gvfs.enable = true; # External devices and other disk in file manager 
+  services.flatpak.enable = true; # Flathub is based on flatpak
 
   system.stateVersion = "24.05"; # Using current system.stateVersion from latest version of NixOS
 }
