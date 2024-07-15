@@ -51,7 +51,6 @@
     lazygit
     bluez
     bluez-tools
-    gh
     nnn
 
     # GUI utils
