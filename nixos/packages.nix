@@ -6,7 +6,7 @@
 
   environment.systemPackages = with pkgs; [
     # Desktop apps
-    firefox
+    vivaldi
     telegram-desktop
     alacritty
     obs-studio
@@ -14,9 +14,14 @@
     mpv
     gparted
     pcmanfm-qt
-    xfce.thunar
     figma-linux
-    #  pollymc
+    redlib
+    qbittorrent
+    pragha
+    fooyin
+    kdePackages.elisa
+    deepin.deepin-music
+    sayonara
 
     # Coding stuff
     gnumake
@@ -24,6 +29,7 @@
     clang
     nodejs
     python
+    helix
     (python3.withPackages (ps: with ps; [ requests ]))
 
     # CLI utils
@@ -36,9 +42,7 @@
     htop
     nix-index
     unzip
-    scrot
     ffmpeg
-    zram-generator
     cava
     zip
     ntfs3g
@@ -47,19 +51,18 @@
     lazygit
     bluez
     bluez-tools
-    neovim
     gh
-    pywal
+    nnn
 
     # GUI utils
     feh
     imv
     dmenu
     screenkey
-    mako
     gromit-mpx
     kdePackages.polkit-kde-agent-1
-
+    lxqt.lxqt-policykit
+    
     # Wayland stuff
     wl-clipboard
     cliphist
@@ -85,8 +88,14 @@
     home-manager
     spice-vdagent
     libsForQt5.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.kirigami2
+    kdePackages.kirigami
     libsForQt5.qt5ct
-    papirus-nord
+    libsForQt5.qt5.qtwayland
+    kdePackages.qtwayland
+    nordzy-icon-theme
+    nordzy-cursor-theme
   ];
 
   fonts.packages = with pkgs; [

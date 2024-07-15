@@ -131,7 +131,7 @@
 }
 
 window#waybar {
-    background: rgba(255, 255, 255, 0.5);
+    background: #3B4252;
     border-radius: 10px;
 }
 
@@ -143,25 +143,25 @@ window#waybar.hidden {
     margin-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: rgba(255, 255, 255, 0.5);
+    background: #4C566A;
 }
 
 #workspaces button {
     transition: none;
-    color: #000000;
+    color: #ECEFF4;
     background: transparent;
     padding: 5px;
     font-size: 18px;
 }
 
 #workspaces button.persistent {
-    color: #000000;
+    color: #ECEFF4;
     font-size: 12px;
 }
 
 #workspaces button.active {
-    background: rgba(255, 255, 255, 0.65);
-    color: black;
+    background: #4C566A;
+    color: #ECEFF4;
     border-radius: inherit;
 }
 
@@ -170,7 +170,7 @@ window#waybar.hidden {
     padding-right: 8px;
     border-radius: 10px 0px 0px 10px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 
@@ -179,7 +179,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 0px 10px 10px 0px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 
@@ -215,7 +215,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 
@@ -233,7 +233,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 
@@ -248,7 +248,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 
@@ -258,7 +258,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 
@@ -321,7 +321,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    color: black;
+    color: #ECEFF4;
     background: transparent;
 }
 

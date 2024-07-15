@@ -1,4 +1,4 @@
-{ inputs, pkgs, ...}: {
+{ config, inputs, pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
@@ -18,7 +18,10 @@
   i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
-  
+ 
+  boot.kernelModules = [ "kvm-intel" "i915" "vfio" "vfio_iommu_type1" "vfio_pci" "vfio-virqfd" ]; 
+
+
   services.gvfs.enable = true; # External devices and other disk in file manager 
   
   services.flatpak.enable = true; # Flathub is based on flatpak

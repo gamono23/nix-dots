@@ -39,19 +39,17 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 3;
-        "col.active_border" = "rgba(dcddd9ee) hex(101013) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "rgba(d8dee9ee)";
+        "col.inactive_border" = "rgba(4c566aaa)";
 
         layout = "dwindle";
-
-        no_cursor_warps = false;
       };
 
       decoration = {
         rounding = 10;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 16;
           passes = 2;
           new_optimizations = true;
@@ -59,7 +57,7 @@
 	  ignore_opacity = true;
         };
 
-        drop_shadow = true;
+        drop_shadow = false;
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
@@ -86,10 +84,6 @@
         preserve_split = true; 
       };
 
-      master = {
-        new_is_master = true;
-      };
-
       misc = {
         animate_manual_resizes = true;
         animate_mouse_windowdragging = true;
@@ -109,11 +103,12 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/nix/home-manager/modules/wms/wall/wallhaven.png"
+        "swww img /home/gamono/nix/home-manager/modules/wms/wall/wallhaven.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
+	      "redlib"
         "wl-paste --type image --watch cliphist store"
-	"/nix/store/$(ls -la /nix/store | grep polkit-kde-agent | grep '^d' | awk '{print $9}')/libexec/polkit-kde-authentication-agent-1"
+	      "lxqt-policykit-agent"
       ];
 
       bind = [
@@ -183,8 +178,8 @@
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
+        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/hyprland.nix"''
+        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/waybar.nix''
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
