@@ -20,7 +20,6 @@
       pkgs = "hx ${flakeDir}/nixos/packages.nix";
 
       ll = "ls -l";
-      v = "hx";
       se = "sudoedit";
       ff = "fastfetch";
     };
