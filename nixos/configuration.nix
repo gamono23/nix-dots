@@ -13,7 +13,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
  
-  boot.kernelModules = [ "kvm-intel" "i915" ]; 
+  boot.kernelModules = [ "kvm-intel" "i915" "nouveau" ]; 
 
   services.gvfs.enable = true; # External devices and other disk in file manager 
 
