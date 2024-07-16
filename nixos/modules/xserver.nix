@@ -7,6 +7,10 @@
       variant = "";
     };
 
+    windowManager.dwm = {
+      enable = true;
+    };
+    
     displayManager = {
       startx.enable = true;
     };
