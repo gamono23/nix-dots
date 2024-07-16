@@ -30,7 +30,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" ];
-      theme = "apple"; # blinks is also really nice
+      theme = "apple";
     };
   };
 }
