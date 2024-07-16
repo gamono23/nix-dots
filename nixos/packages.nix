@@ -43,7 +43,6 @@
     nix-index
     unzip
     ffmpeg
-    cava
     zip
     ntfs3g
     swww
