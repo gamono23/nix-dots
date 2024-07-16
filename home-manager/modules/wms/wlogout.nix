@@ -43,6 +43,7 @@
 
     style = ''
       * {
+        font-family: JetBrains Mono;
       	background-image: none;
       	box-shadow: none;
       }
