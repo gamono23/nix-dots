@@ -14,7 +14,7 @@
           "hyprland/submap"
         ];
         modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "custom/mem" "cpu" "battery" "tray" ];
+        modules-right = [ "pulseaudio" "custom/mem" "cpu" "battery" "tray" "custom/wlogout" ];
 
         "hyprland/workspaces" = { disable-scroll = true; };
 
@@ -26,7 +26,6 @@
         };
 
         "keyboard-state" = {
-          #numlock = true;
           capslock = true;
           format = "{icon} ";
           format-icons = {
@@ -36,7 +35,6 @@
         };
 
         "clock" = {
-          # timezone = "America/New_York";
           tooltip-format = ''
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
@@ -52,7 +50,6 @@
         };
 
         "pulseaudio" = {
-          # scroll-step = 1; # %, can be a float
           reverse-scrolling = 1;
           format = "{volume}% {icon} {format_source}";
           format-bluetooth = "{volume}% {icon} {format_source}";
@@ -77,6 +74,12 @@
           format = "{} ";
           interval = 3;
           exec = "free -h | awk '/Mem:/{printf $3}'";
+          tooltip = false;
+        };
+
+        "custom/wlogout" = {
+          format = "{} 󰐥";
+          on-click = "exec wlogout";
           tooltip = false;
         };
 
@@ -170,33 +173,6 @@
           background: transparent;
       }
 
-      #custom-pacman {
-          padding-left: 16px;
-          padding-right: 8px;
-          border-radius: 10px 0px 0px 10px;
-          transition: none;
-          color: black;
-          background: transparent;
-      }
-
-      #custom-mail {
-          margin-right: 8px;
-          padding-right: 16px;
-          border-radius: 0px 10px 10px 0px;
-          transition: none;
-          color: #ffffff;
-          background: transparent;
-      }
-
-      #submap {
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
       #clock {
           padding-left: 16px;
           padding-right: 16px;
@@ -206,12 +182,12 @@
           background: transparent;
       }
 
-      #custom-weather {
+      #custom-wlogout {
           padding-right: 16px;
           border-radius: 0px 10px 10px 0px;
           transition: none;
-          color: #ffffff;
-          background: #383c4a;
+          color: #ECEFF4;
+          background: transparent;
       }
 
       #pulseaudio {
