@@ -22,6 +22,7 @@
     kdePackages.elisa
     deepin.deepin-music
     sayonara
+    vscode
 
     # Coding stuff
     gnumake
