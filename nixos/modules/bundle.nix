@@ -12,6 +12,5 @@
     ./trim.nix
     ./bluetooth.nix
     ./nvidia.nix
-    # ./nixvim/nixvim.nix
   ];
 }

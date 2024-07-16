@@ -10,14 +10,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    polymc.url = "github:PolyMC/PolyMC";
-    pollymc.url = "github:fn2006/PollyMC"; # Doesn't work for some reason
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
@@ -37,7 +29,6 @@
       };
       modules = [
         ./nixos/configuration.nix
-        inputs.nixvim.nixosModules.nixvim
       ];
     };
 
