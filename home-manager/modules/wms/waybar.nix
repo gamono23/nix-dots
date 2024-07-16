@@ -225,60 +225,6 @@
           background: transparent;
       }
 
-      #temperature {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
-      #temperature.critical {
-          background-color: #eb4d4b;
-      }
-
-      #backlight {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
-      #battery {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
-      #battery.charging {
-          color: #ffffff;
-          background-color: #26A65B;
-      }
-
-      #battery.warning:not(.charging) {
-          background-color: #ffbe61;
-          color: black;
-      }
-
-      #battery.critical:not(.charging) {
-          background-color: #f53c3c;
-          color: #ffffff;
-          animation-name: blink;
-          animation-duration: 0.5s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
-      }
-
       #tray {
           padding-left: 16px;
           padding-right: 16px;
