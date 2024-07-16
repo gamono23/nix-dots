@@ -32,6 +32,7 @@
     nodejs
     python
     helix
+    nixfmt
     (python3.withPackages (ps: with ps; [ requests ]))
 
     # CLI utils

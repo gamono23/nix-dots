@@ -53,8 +53,8 @@
           size = 16;
           passes = 2;
           new_optimizations = true;
-	        xray = true;
-	        ignore_opacity = true;
+          xray = true;
+          ignore_opacity = true;
         };
 
         drop_shadow = true;
@@ -81,7 +81,7 @@
 
       dwindle = {
         pseudotile = true;
-        preserve_split = true; 
+        preserve_split = true;
       };
 
       misc = {
@@ -92,23 +92,18 @@
         disable_hyprland_logo = true;
       };
 
-      windowrule = [
-        "float, ^(imv)$"
-        "float, ^(mpv)$"
-      ];
+      windowrule = [ "float, ^(imv)$" "float, ^(mpv)$" ];
 
-      layerrule = [
-	"blur, waybar"
-      ];
+      layerrule = [ "blur, waybar" ];
 
       exec-once = [
         "swww init"
         "swww img /home/gamono/nix/home-manager/modules/wms/wall/wallhaven.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
-	      "redlib"
+        "redlib"
         "wl-paste --type image --watch cliphist store"
-	      "lxqt-policykit-agent"
+        "lxqt-policykit-agent"
       ];
 
       bind = [
@@ -174,12 +169,14 @@
         ", XF86AudioLowerVolume, exec, pamixer -d 5 "
         ", XF86AudioMute, exec, pamixer -t"
         ", XF86AudioMicMute, exec, pamixer --default-source -m"
- 
+
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/waybar.nix''
+        ''
+          $mainMod SHIFT, H, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/hyprland.nix"''
+        ''
+          $mainMod SHIFT, W, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/waybar.nix''
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
