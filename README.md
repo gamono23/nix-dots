@@ -1,4 +1,4 @@
-# ❄️ My NixOS Config
+# NixOwOs Config
 
 ```bash
 git clone https://github.com/gamono23/nix-dots
