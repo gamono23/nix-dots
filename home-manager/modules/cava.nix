@@ -10,6 +10,7 @@
       };
       output.alacritty_sync = 1;
       color = {
+        gradient = 1;
         gradient_color_1 = "'#bf616a'";
         gradient_color_2 = "'#d08770'";
         gradient_color_3 = "'#ebcb8b'";

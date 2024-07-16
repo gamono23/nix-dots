@@ -8,6 +8,7 @@
     # Desktop apps
     firefox
     telegram-desktop
+    signal-desktop
     alacritty
     obs-studio
     wofi
