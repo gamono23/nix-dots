@@ -1,4 +1,4 @@
-{ config, lib, ...}: {
+/* { config, lib, ...}: {
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -28,3 +28,4 @@
     };
   }; 
 }
+*/
