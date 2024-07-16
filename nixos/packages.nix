@@ -6,7 +6,6 @@
 
   environment.systemPackages = with pkgs; [
     # Desktop apps
-    vivaldi
     firefox
     telegram-desktop
     alacritty
@@ -20,8 +19,6 @@
     qbittorrent
     pragha
     fooyin
-    kdePackages.elisa
-    deepin.deepin-music
     sayonara
     vscode
 
@@ -62,7 +59,6 @@
     dmenu
     screenkey
     gromit-mpx
-    kdePackages.polkit-kde-agent-1
     lxqt.lxqt-policykit
     
     # Wayland stuff
@@ -90,12 +86,6 @@
     home-manager
     spice-vdagent
     libsForQt5.qtstyleplugin-kvantum
-    kdePackages.qtstyleplugin-kvantum
-    libsForQt5.kirigami2
-    kdePackages.kirigami
-    libsForQt5.qt5ct
-    libsForQt5.qt5.qtwayland
-    kdePackages.qtwayland
     nordzy-icon-theme
     nordzy-cursor-theme
   ];

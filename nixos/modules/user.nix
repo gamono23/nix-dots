@@ -8,7 +8,7 @@
       isNormalUser = true;
       description = "gamono";
       extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
-      packages = with pkgs; [];
+      packages = with pkgs; [ ];
     };
   };
 

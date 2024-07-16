@@ -1,4 +1,4 @@
-{ config, lib, ...}: {
+{ config, lib, ... }: {
   services.xserver = {
     enable = true;
 
@@ -7,12 +7,8 @@
       variant = "";
     };
 
-    windowManager.dwm = {
-      enable = true;
-    };
-    
-    displayManager = {
-      startx.enable = true;
-    };
+    windowManager.dwm = { enable = true; };
+
+    displayManager = { startx.enable = true; };
   };
- }
+}

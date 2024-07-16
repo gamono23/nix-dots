@@ -5,10 +5,6 @@
     ./modules/bundle.nix
   ];
 
-  # disabledModules = [
-  #  ./modules/xserver.nix
-  #];
-
   networking.hostName = "RyoYamada"; # Define your hostname.
 
   time.timeZone = "Europe/Moscow"; # Set your time zone.
