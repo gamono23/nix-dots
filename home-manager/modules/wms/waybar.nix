@@ -41,13 +41,6 @@
           format = "{:%a; %d %b, %I:%M %p}";
         };
 
-        "custom/weather" = {
-          format = "{}";
-          tooltip = true;
-          interval = 1800;
-          exec = "$HOME/.config/waybar/scripts/wttr.py";
-          return-type = "json";
-        };
 
         "pulseaudio" = {
           reverse-scrolling = 1;
@@ -87,19 +80,6 @@
           interval = 2;
           format = "{usage}% ";
           min-length = 6;
-        };
-
-        battery = {
-          states = {
-            warning = 30;
-            critical = 15;
-          };
-          format = "{capacity}% {icon}";
-          format-charging = "{capacity}% ";
-          format-plugged = "{capacity}% ";
-          format-alt = "{time} {icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
-          on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
         };
 
         tray = {
