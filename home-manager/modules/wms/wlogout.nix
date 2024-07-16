@@ -48,24 +48,19 @@
       }
 
       window {
-      	background-color: rgba(12, 12, 12, 0.9);
+      	background-color: #2e3440;
       }
 
       button {
-        border-radius: 10;
-        border-color: black;
-      	text-decoration-color: #FFFFFF;
-        color: #FFFFFF;
-      	background-color: #1E1E1E;
-      	border-style: solid;
-      	border-width: 1px;
-      	background-repeat: no-repeat;
-      	background-position: center;
-      	background-size: 25%;
+        margin: 25px;
+        border-radius: 30px;
+      	text-decoration-color: #eceff4;
+        color: #eceff4;
+      	background-color: #3b4252;
       }
 
       button:focus, button:active, button:hover {
-      	background-color: #3700B3;
+      	background-color: #4c566a;
       	outline-style: none;
       }
     '';
