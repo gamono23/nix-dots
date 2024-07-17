@@ -44,25 +44,25 @@
     style = ''
       * {
         font-family: JetBrains Mono;
-      	background-image: none;
-      	box-shadow: none;
+      	  background-image: none;
+      	  box-shadow: none;
       }
 
       window {
-      	background-color: #2e3440;
+      	  background-color: #2e3440;
       }
 
       button {
         margin: 25px;
         border-radius: 30px;
-      	text-decoration-color: #eceff4;
+      	  text-decoration-color: #eceff4;
         color: #eceff4;
       	background-color: #3b4252;
       }
 
       button:focus, button:active, button:hover {
-      	background-color: #4c566a;
-      	outline-style: none;
+      	  background-color: #4c566a;
+      	  outline-style: none;
       }
     '';
   };
