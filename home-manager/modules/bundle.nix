@@ -10,5 +10,6 @@
     ./wms/hyprland.nix
     ./wms/waybar.nix
     ./wms/wlogout.nix
+    ./wms/wofi.nix
   ];
 }
