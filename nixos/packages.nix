@@ -11,7 +11,6 @@
     signal-desktop
     alacritty
     obs-studio
-    wofi
     mpv
     gparted
     pcmanfm-qt
