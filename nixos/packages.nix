@@ -86,6 +86,7 @@
     home-manager
     spice-vdagent
     libsForQt5.qtstyleplugin-kvantum
+    nvidia-vaapi-driver
     nordzy-icon-theme
     nordzy-cursor-theme
   ];
