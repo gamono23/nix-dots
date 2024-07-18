@@ -5,6 +5,8 @@
     ./modules/bundle.nix
   ];
 
+  users.users.gamono.extraGroups = [ "docker" ];
+
   networking.hostName = "RyoYamada"; # Define your hostname.
 
   time.timeZone = "Europe/Moscow"; # Set your time zone.

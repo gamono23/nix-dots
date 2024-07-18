@@ -31,6 +31,7 @@
         kb_variant = "lang";
         kb_options = "grp:alt_shift_toggle";
 
+        force_no_accel = true;
         natural_scroll = true;
         scroll_factor = 0.1;
         follow_mouse = 1;

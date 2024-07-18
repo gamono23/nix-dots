@@ -12,5 +12,6 @@
     ./trim.nix
     ./bluetooth.nix
     ./nvidia.nix
+    ./docker.nix
   ];
 }

@@ -26,11 +26,14 @@
     gnumake
     gcc
     clang
+    cmake
     nodejs
     python
     helix
     nixfmt-classic
     (python3.withPackages (ps: with ps; [ requests ]))
+    poetry
+    docker-client
 
     # CLI utils
     neofetch
