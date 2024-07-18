@@ -32,7 +32,7 @@
         kb_options = "grp:alt_shift_toggle";
 
         natural_scroll = true;
-        scroll_factor = 0.5;
+        scroll_factor = 0;
         follow_mouse = 1;
         sensitivity = 0;
       };
