@@ -103,8 +103,8 @@
         "swww img /home/gamono/nix/home-manager/modules/wms/wall/wallhaven.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
-        "redlib"
         "wl-paste --type image --watch cliphist store"
+        "redlib"
         "lxqt-policykit-agent"
       ];
 
@@ -119,12 +119,6 @@
         "$mainMod, D, exec, wofi --show drun"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
-
-        # Move focus with mainMod + arrow keys
-        "$mainMod, left,  movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up,    movefocus, u"
-        "$mainMod, down,  movefocus, d"
 
         # Moving windows
         "$mainMod SHIFT, left,  swapwindow, l"
@@ -162,23 +156,6 @@
         "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
         "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
 
-        # Scroll through existing workspaces with mainMod + scroll
-        "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
-
-        # Volume and Media Control
-        ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-        ", XF86AudioLowerVolume, exec, pamixer -d 5 "
-        ", XF86AudioMute, exec, pamixer -t"
-        ", XF86AudioMicMute, exec, pamixer --default-source -m"
-
-        # Configuration files
-        ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
-        ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''
-          $mainMod SHIFT, H, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''
-          $mainMod SHIFT, W, exec, alacritty -e sh -c "hx ~/nix/home-manager/modules/wms/waybar.nix''
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
