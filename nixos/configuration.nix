@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./modules/bundle.nix
-    ./stylix.nix
+    ./stylix/stylix.nix
   ];
 
   networking.hostName = "RyoYamada"; # Define your hostname.
