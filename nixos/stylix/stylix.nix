@@ -32,9 +32,5 @@
         name = "Twemoji Color Font";
       };
     };
-
-    targets.waybar = {
-      enable = true;
-    };
   };
 }
