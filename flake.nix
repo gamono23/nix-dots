@@ -6,13 +6,15 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
+    stylix.url = "github:danth/stylix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, stylix, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -29,6 +31,7 @@
       };
       modules = [
         ./nixos/configuration.nix
+        stylix.nixosModules.stylix
       ];
     };
 
