@@ -45,7 +45,8 @@
     htop
     nix-index
     unzip
-    ffmpeg
+    ffmpeg-full
+    yt-dlp
     zip
     ntfs3g
     swww
