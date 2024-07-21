@@ -42,8 +42,6 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 3;
-        # "col.active_border" = "rgba(d8dee9ee)";
-        # "col.inactive_border" = "rgba(4c566aaa)";
 
         layout = "dwindle";
       };
@@ -63,14 +61,12 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        # "col.shadow" = "rgba(1a1a1aee)";
       };
 
       animations = {
         enabled = true;
 
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-        # bezier = "myBezier, 0.33, 0.82, 0.9, -0.08";
 
         animation = [
           "windows,     1, 7,  myBezier"

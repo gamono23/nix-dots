@@ -94,14 +94,12 @@
       * {
           border: none;
           border-radius: 0;
-          /* `otf-font-awesome` is required to be installed for icons */
           font-family: JetBrains Mono;
           font-weight: bold; 
           min-height: 20px;
       }
 
       window#waybar {
-          // background: #3B4252;
           border-radius: 10px;
       }
 
@@ -113,25 +111,20 @@
           margin-right: 16px;
           border-radius: 10px;
           transition: none;
-          // background: #4C566A;
       }
 
       #workspaces button {
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
           padding: 5px;
           font-size: 18px;
       }
 
       #workspaces button.persistent {
-          // color: #ECEFF4;
           font-size: 12px;
       }
 
       #workspaces button.active {
-          // background: #4C566A;
-          // color: #ECEFF4;
           border-radius: inherit;
       }
 
@@ -140,7 +133,6 @@
           padding-right: 8px;
           border-radius: 10px 0px 0px 10px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
@@ -149,7 +141,6 @@
           padding-right: 16px;
           border-radius: 0px 10px 10px 0px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
@@ -158,7 +149,6 @@
           padding-right: 16px;
           border-radius: 10px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
@@ -166,7 +156,6 @@
           padding-right: 16px;
           border-radius: 0px 10px 10px 0px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
@@ -176,13 +165,11 @@
           padding-right: 16px;
           border-radius: 10px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
       #pulseaudio.muted {
           background-color: transparent;
-          // color: black;
       }
 
       #custom-mem {
@@ -191,7 +178,6 @@
           padding-right: 16px;
           border-radius: 10px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
@@ -201,7 +187,6 @@
           padding-right: 16px;
           border-radius: 10px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
@@ -210,7 +195,6 @@
           padding-right: 16px;
           border-radius: 10px;
           transition: none;
-          // color: #ECEFF4;
           background: transparent;
       }
 
