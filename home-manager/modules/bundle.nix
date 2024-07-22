@@ -1,10 +1,11 @@
 {
   imports = [
-    ./cursor.nix
+    ./stylix/stylix.nix
+    # ./cursor.nix
     ./git.nix
     ./htop.nix
-    ./alacritty.nix
-    ./qt.nix
+    # ./alacritty.nix
+    # ./qt.nix
     ./mako.nix
     ./cava.nix
     ./wms/hyprland.nix
