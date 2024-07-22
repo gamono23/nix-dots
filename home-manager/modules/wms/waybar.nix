@@ -1,4 +1,37 @@
-{
+{ _prefs, lib, config, pkgs, ... }:
+let
+  colorNames = [
+    "base00"
+    "base01"
+    "base02"
+    "base03"
+    "base04"
+    "base05"
+    "base06"
+    "base07"
+    "base08"
+    "base09"
+    "base0A"
+    "base0B"
+    "base0C"
+    "base0D"
+    "base0E"
+    "base0F"
+  ];
+
+  # Colors used in the markup
+  colors = config.lib.stylix.colors.withHashtag;
+  secondary = colors.${_prefs.secondaryColor};
+  yellow = colors.base0A;
+  peach = colors.base09;
+  red = colors.base08;
+  green = colors.base0B;
+
+  defineColor = name: value: "@define-color ${name} ${value};";
+
+  markup = color: text:
+    ''<span color="${color}" style="oblique">${text}</span>'';
+in {
   programs.waybar = {
     enable = true;
     settings = {
@@ -14,7 +47,8 @@
           "hyprland/submap"
         ];
         modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "custom/mem" "cpu" "battery" "tray" "custom/wlogout" ];
+        modules-right =
+          [ "pulseaudio" "custom/mem" "cpu" "battery" "tray" "custom/wlogout" ];
 
         "hyprland/workspaces" = { disable-scroll = true; };
 
@@ -40,7 +74,6 @@
             <tt><small>{calendar}</small></tt>'';
           format = "{:%a; %d %b, %I:%M %p}";
         };
-
 
         "pulseaudio" = {
           reverse-scrolling = 1;
@@ -90,120 +123,124 @@
       };
     };
 
-    style = ''
-      * {
-          border: none;
-          border-radius: 0;
-          font-family: JetBrains Mono;
-          font-weight: bold; 
-          min-height: 20px;
-      }
+    style = lib.strings.concatStringsSep "\n"
+      (builtins.map (color: defineColor color colors.${color}) colorNames) + ''
+        ${defineColor "primary" colors.${_prefs.primaryColor}}
+        ${defineColor "secondary" colors.${_prefs.secondaryColor}}
+      '' + ''
+        * {
+            border: none;
+            border-radius: 0;
+            font-family: ${config.stylix.fonts.monospace.name};
+            font-weight: bold; 
+            min-height: 20px;
+        }
 
-      window#waybar {
-          border-radius: 10px;
-      }
+        window#waybar {
+            border-radius: 10px;
+        }
 
-      window#waybar.hidden {
-          opacity: 0.2;
-      }
+        window#waybar.hidden {
+            opacity: 0.2;
+        }
 
-      #workspaces {
-          margin-right: 16px;
-          border-radius: 10px;
-          transition: none;
-      }
+        #workspaces {
+            margin-right: 16px;
+            border-radius: 10px;
+            transition: none;
+        }
 
-      #workspaces button {
-          transition: none;
-          background: transparent;
-          padding: 5px;
-          font-size: 18px;
-      }
+        #workspaces button {
+            transition: none;
+            background: transparent;
+            padding: 5px;
+            font-size: 18px;
+        }
 
-      #workspaces button.persistent {
-          font-size: 12px;
-      }
+        #workspaces button.persistent {
+            font-size: 12px;
+        }
 
-      #workspaces button.active {
-          border-radius: inherit;
-      }
+        #workspaces button.active {
+            border-radius: inherit;
+        }
 
-      #language {
-          padding-left: 16px;
-          padding-right: 8px;
-          border-radius: 10px 0px 0px 10px;
-          transition: none;
-          background: transparent;
-      }
+        #language {
+            padding-left: 16px;
+            padding-right: 8px;
+            border-radius: 10px 0px 0px 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      #keyboard-state {
-          margin-right: 8px;
-          padding-right: 16px;
-          border-radius: 0px 10px 10px 0px;
-          transition: none;
-          background: transparent;
-      }
+        #keyboard-state {
+            margin-right: 8px;
+            padding-right: 16px;
+            border-radius: 0px 10px 10px 0px;
+            transition: none;
+            background: transparent;
+        }
 
-      #clock {
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          background: transparent;
-      }
+        #clock {
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      #custom-wlogout {
-          padding-right: 16px;
-          border-radius: 0px 10px 10px 0px;
-          transition: none;
-          background: transparent;
-      }
+        #custom-wlogout {
+            padding-right: 16px;
+            border-radius: 0px 10px 10px 0px;
+            transition: none;
+            background: transparent;
+        }
 
-      #pulseaudio {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          background: transparent;
-      }
+        #pulseaudio {
+            margin-right: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      #pulseaudio.muted {
-          background-color: transparent;
-      }
+        #pulseaudio.muted {
+            background-color: transparent;
+        }
 
-      #custom-mem {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          background: transparent;
-      }
+        #custom-mem {
+            margin-right: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      #cpu {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          background: transparent;
-      }
+        #cpu {
+            margin-right: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      #tray {
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          background: transparent;
-      }
+        #tray {
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 10px;
+            transition: none;
+            background: transparent;
+        }
 
-      @keyframes blink {
-          to {
-              background-color: #ffffff;
-              color: #000000;
-          }
-      }
-    '';
+        @keyframes blink {
+            to {
+                background-color: #ffffff;
+                color: #000000;
+            }
+        }
+      '';
   };
 }
