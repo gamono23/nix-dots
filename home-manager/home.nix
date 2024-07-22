@@ -7,6 +7,6 @@
   home = {
     username = "gamono";
     homeDirectory = "/home/gamono";
-    stateVersion = "24.05";
+    stateVersion = "24.11";
   };
 }

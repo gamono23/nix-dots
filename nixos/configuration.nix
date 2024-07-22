@@ -18,5 +18,5 @@
 
   services.gvfs.enable = true; # External devices and other disk in file manager 
 
-  system.stateVersion = "24.05"; # Using current system.stateVersion from latest version of NixOS
+  system.stateVersion = "24.11"; # Using current system.stateVersion from latest version of NixOS
 }
