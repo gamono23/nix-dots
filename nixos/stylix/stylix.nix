@@ -8,10 +8,6 @@
       followSystem = true;
     };
 
-    targets = {
-      alacritty.enable = true;
-    };
-
     image = ./wall/wallhaven.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
 
