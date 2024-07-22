@@ -1,5 +1,6 @@
 { pkgs, ...}: {
     stylix = {
+        autoEnable = false;
         image = ./wall/wallhaven.png;
         base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
         targets = {
@@ -7,6 +8,7 @@
             gtk.enable = true;
             helix.enable = true;
             hyprland.enable = true;
+            hyprpaper.enable = true;
             mako.enable = true;
             vscode.enable = true;
             waybar = {
