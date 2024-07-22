@@ -49,7 +49,6 @@
     yt-dlp
     zip
     ntfs3g
-    swww
     openssl
     lazygit
     bluez
@@ -70,6 +69,7 @@
 
     # WMs and stuff
     hyprland
+    hyprpaper
     seatd
     xdg-desktop-portal-hyprland
     waybar
