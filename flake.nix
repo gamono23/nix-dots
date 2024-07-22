@@ -8,7 +8,7 @@
 
     stylix.url = "github:danth/stylix";
 
-    aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     aagl.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
