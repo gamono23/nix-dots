@@ -1,6 +1,7 @@
-{
+{ pkgs, ...}: {
     stylix = {
         image = ./wall/wallhaven.png;
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
         targets = {
             alacritty.enable = true;
             gtk.enable = true;

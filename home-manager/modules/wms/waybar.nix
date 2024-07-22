@@ -1,5 +1,5 @@
-{ _prefs, lib, config, pkgs, ... }:
-/* let
+{ lib, config, pkgs, ... }:
+let
   colorNames = [
     "base00"
     "base01"
@@ -21,7 +21,7 @@
 
   # Colors used in the markup
   colors = config.lib.stylix.colors.withHashtag;
-  secondary = colors.${_prefs.secondaryColor};
+  secondary = colors.base03;
   yellow = colors.base0A;
   peach = colors.base09;
   red = colors.base08;
@@ -31,7 +31,7 @@
 
   markup = color: text:
     ''<span color="${color}" style="oblique">${text}</span>'';
-in */{
+in {
   programs.waybar = {
     enable = true;
     settings = {
@@ -123,22 +123,28 @@ in */{
       };
     };
 
-    style = /* lib.strings.concatStringsSep "\n"
-      (builtins.map (color: defineColor color colors.${color}) colorNames) + ''
-        ${defineColor "primary" colors.${_prefs.primaryColor}}
-        ${defineColor "secondary" colors.${_prefs.secondaryColor}}
-      '' + */ 
+    style = lib.strings.concatStringsSep "\n"
+      (builtins.map (color: defineColor color colors.${color}) colorNames) 
+      + 
+      ''
+        ${defineColor "primary" colors.base03}
+        ${defineColor "secondary" colors.base00}
+        ${defineColor "text" colors.base06}
+      '' 
+      + 
       ''
         * {
             border: none;
             border-radius: 0;
-            font-family: JetBrains Mono;
+            font-family: ${config.stylix.fonts.monospace.name};
             font-weight: bold; 
             min-height: 20px;
+            color: @text;
         }
 
         window#waybar {
             border-radius: 10px;
+            background-color: @secondary;
         }
 
         window#waybar.hidden {
@@ -153,9 +159,9 @@ in */{
 
         #workspaces button {
             transition: none;
-            background: transparent;
             padding: 5px;
             font-size: 18px;
+            background-color: @secondary;
         }
 
         #workspaces button.persistent {
@@ -164,6 +170,7 @@ in */{
 
         #workspaces button.active {
             border-radius: inherit;
+            background-color: @primary;
         }
 
         #language {
