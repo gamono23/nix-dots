@@ -8,17 +8,13 @@
     # Desktop apps
     firefox
     telegram-desktop
-    signal-desktop
     obs-studio
     mpv
     gparted
     pcmanfm
-    figma-linux
     redlib
     qbittorrent
-    pragha
     fooyin
-    sayonara
     vscode
 
     # Coding stuff
@@ -32,7 +28,6 @@
     nixfmt-classic
     (python3.withPackages (ps: with ps; [ requests ]))
     poetry
-    docker-client
     tmux
 
     # CLI utils
@@ -58,8 +53,6 @@
     # GUI utils
     feh
     imv
-    dmenu
-    screenkey
     gromit-mpx
     lxqt.lxqt-policykit
     

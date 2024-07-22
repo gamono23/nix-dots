@@ -7,11 +7,9 @@
     ./user.nix
     ./xserver.nix
     ./nm.nix
-    ./virtmanager.nix
     ./hyprland.nix
     ./trim.nix
     ./bluetooth.nix
     ./nvidia.nix
-    ./docker.nix
   ];
 }
