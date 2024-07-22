@@ -8,13 +8,16 @@
 
     stylix.url = "github:danth/stylix";
 
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
+    aagl.inputs.nixpkgs.follows = "nixpkgs";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, stylix, aagl, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -32,6 +35,11 @@
       modules = [
         ./nixos/configuration.nix
         stylix.nixosModules.stylix
+        {
+          imports = [ aagl.nixosModules.default ];
+          nix.settings = aagl.nixConfig;
+          programs.anime-game-launcher.enable = true;
+        }
       ];
     };
 
