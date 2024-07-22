@@ -132,7 +132,7 @@ in */{
         * {
             border: none;
             border-radius: 0;
-            font-family: ${config.stylix.fonts.monospace.name};
+            font-family: JetBrains Mono;
             font-weight: bold; 
             min-height: 20px;
         }
