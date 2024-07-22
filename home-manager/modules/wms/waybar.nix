@@ -28,9 +28,6 @@ let
   green = colors.base0B;
 
   defineColor = name: value: "@define-color ${name} ${value};";
-
-  markup = color: text:
-    ''<span color="${color}" style="oblique">${text}</span>'';
 in {
   programs.waybar = {
     enable = true;
