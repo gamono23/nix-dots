@@ -7,14 +7,19 @@
       autoImport = true;
       followSystem = true;
     };
-
-    image = ./wall/wallhaven.png;
+    
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
 
+    targets = {
+      console.enable = true;
+      grub.enable = true;
+      gtk.enable = true;
+    };
+
     cursor = {
-        package = pkgs.nordzy-cursor-theme;
-        name = "Nordzy-cursors";
-        size = 24;
+      package = pkgs.nordzy-cursor-theme;
+      name = "Nordzy-cursors";
+      size = 24;
     };
 
     fonts = {

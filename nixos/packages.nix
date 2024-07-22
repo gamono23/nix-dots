@@ -9,11 +9,10 @@
     firefox
     telegram-desktop
     signal-desktop
-    alacritty
     obs-studio
     mpv
     gparted
-    pcmanfm-qt
+    pcmanfm
     figma-linux
     redlib
     qbittorrent
@@ -34,6 +33,7 @@
     (python3.withPackages (ps: with ps; [ requests ]))
     poetry
     docker-client
+    tmux
 
     # CLI utils
     neofetch
@@ -69,7 +69,6 @@
 
     # WMs and stuff
     hyprland
-    hyprpaper
     seatd
     xdg-desktop-portal-hyprland
     waybar

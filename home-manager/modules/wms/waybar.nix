@@ -152,10 +152,12 @@ in {
             margin-right: 16px;
             border-radius: 10px;
             transition: none;
+            background-color: @secondary;
         }
 
         #workspaces button {
             transition: none;
+            border-radius: 10px;
             padding: 5px;
             font-size: 18px;
             background-color: @secondary;
@@ -163,6 +165,7 @@ in {
 
         #workspaces button.persistent {
             font-size: 12px;
+            background-color: @secondary;
         }
 
         #workspaces button.active {

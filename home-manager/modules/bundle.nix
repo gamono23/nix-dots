@@ -1,7 +1,7 @@
 {
   imports = [
     ./stylix/stylix.nix
-    # ./cursor.nix
+    ./cursor.nix
     ./git.nix
     ./htop.nix
     # ./alacritty.nix
