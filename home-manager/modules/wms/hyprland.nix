@@ -3,6 +3,14 @@
     enable = true;
     settings = {
       splash = false;
+
+      preload = [
+        "/home/gamono/nix/home-manager/modules/stylix/wall/wallhaven.png"
+      ];
+
+      wallpaper = [
+        "HDMI-A-3,/home/gamono/nix/home-manager/modules/stylix/wall/wallhaven.png"  
+      ];
     };
   };
   wayland.windowManager.hyprland = {

@@ -125,7 +125,7 @@ in {
       + 
       ''
         ${defineColor "primary" colors.base03}
-        ${defineColor "secondary" colors.base00}
+        ${defineColor "secondary" colors.base01}
         ${defineColor "text" colors.base06}
       '' 
       + 

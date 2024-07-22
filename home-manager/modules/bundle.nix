@@ -4,7 +4,7 @@
     ./cursor.nix
     ./git.nix
     ./htop.nix
-    # ./alacritty.nix
+    ./alacritty.nix
     # ./qt.nix
     ./mako.nix
     ./cava.nix
