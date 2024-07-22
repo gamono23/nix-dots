@@ -16,6 +16,8 @@
     qbittorrent
     fooyin
     vscode
+    steam
+    gamescope
 
     # Coding stuff
     gnumake
