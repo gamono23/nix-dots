@@ -1,5 +1,5 @@
 { _prefs, lib, config, pkgs, ... }:
-let
+/* let
   colorNames = [
     "base00"
     "base01"
@@ -31,7 +31,7 @@ let
 
   markup = color: text:
     ''<span color="${color}" style="oblique">${text}</span>'';
-in {
+in */{
   programs.waybar = {
     enable = true;
     settings = {
@@ -123,11 +123,12 @@ in {
       };
     };
 
-    style = lib.strings.concatStringsSep "\n"
+    style = /* lib.strings.concatStringsSep "\n"
       (builtins.map (color: defineColor color colors.${color}) colorNames) + ''
         ${defineColor "primary" colors.${_prefs.primaryColor}}
         ${defineColor "secondary" colors.${_prefs.secondaryColor}}
-      '' + ''
+      '' + */ 
+      ''
         * {
             border: none;
             border-radius: 0;
