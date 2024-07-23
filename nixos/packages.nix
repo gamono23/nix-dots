@@ -26,7 +26,6 @@
     cmake
     nodejs
     python
-    helix
     nixfmt-classic
     (python3.withPackages (ps: with ps; [ requests ]))
     poetry

@@ -5,6 +5,7 @@
     ./git.nix
     ./htop.nix
     ./alacritty.nix
+    ./helix.nix
     # ./qt.nix
     ./mako.nix
     ./cava.nix
